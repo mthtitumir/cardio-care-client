@@ -4,7 +4,7 @@ import logo from '../../../assets/logo/cardio-care.png'
 const NavBar = () => {
     return (
         <div className='fixed z-50 top-0 w-full bg-cyan-50 drop-shadow-lg'>
-            <div className=" navbar container mx-auto">
+            <div className=" navbar container mx-auto rounded-lg border">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">

@@ -3,7 +3,7 @@ import logo from '../../../assets/logo/cardio-care.png'
 
 const Footer = () => {
     return (
-        <div className=' bg-sky-500'>
+        <div className=' bg-cyan-50'>
             <footer className="footer p-10 text-base-content container mx-auto grid md:grid-cols-4">
                 <div>
                     <img className='w-40' src={logo} alt="cardio-care-logo" />
