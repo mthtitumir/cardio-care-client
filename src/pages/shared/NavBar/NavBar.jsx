@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from '../../../assets/logo/cardio-care.png'
+import { Link } from 'react-router-dom';
 
 const NavBar = () => {
     return (
@@ -29,7 +30,7 @@ const NavBar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="bg-cyan-500 py-2 px-3 rounded-lg text-sm text-white uppercase font-semibold">Book Appointment</a>
+                    <Link to='/appointment' className="bg-cyan-500 py-2 px-3 rounded-lg text-sm text-white uppercase font-semibold">Book Appointment</Link>
                 </div>
             </div>
         </div>
