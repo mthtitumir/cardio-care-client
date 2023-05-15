@@ -18,7 +18,7 @@ const AppointForm = () => {
         fetch('http://localhost:4500/appointments', {
             method: 'POST',
             headers: {
-                'content-type': 'application/json'
+                'Content-Type': 'application/json'
             },
             body: JSON.stringify(appointment)
         })
