@@ -1,12 +1,13 @@
 import React from 'react';
 import logo from '../../../assets/logo/cardio-care.png'
+import { Link } from 'react-router-dom';
 
 const AdNavBar = () => {
     return (
         <div className="navbar bg-base-100 container mx-auto">
             <div className='flex flex-1 items-center'>
                 <img className='w-10' src={logo} alt="" />
-                <a className="font-bold normal-case text-xl"><span className='text-red-600'>Cardio</span><span className='text-cyan-600'>Care</span> Admin</a>
+                <Link to='/' className="font-bold normal-case text-xl"><span className='text-red-600'>Cardio</span><span className='text-cyan-600'>Care</span> Admin</Link>
             </div>
             <div className="flex-none">
                 <div className="dropdown dropdown-end">

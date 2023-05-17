@@ -25,6 +25,7 @@ const AppointForm = () => {
         .then(res => res.json())
         .then(data =>{
             console.log(data);
+            form.reset();
         })
         console.log(appointment);
     }

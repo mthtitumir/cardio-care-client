@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const SingleDoctor = ({ doctor }) => {
 
@@ -24,7 +25,7 @@ const SingleDoctor = ({ doctor }) => {
                         className='relative'>
                             <figure className='rounded-[50%]'><img src={photoUrl} alt="Shoes" /></figure>
                             <div className='absolute left-0 right-0 w-1/2 mx-auto bottom-5 text-white uppercase'>
-                                <h2 className='bg-red-700 text-center w-full py-3 rounded font-semibold'>Book Appointment</h2>
+                                <Link to='/appointment'><h2 className='bg-red-500 text-center w-full py-3 rounded font-semibold'>Book Appointment</h2></Link> 
                             </div>
                         </div> :
                         <figure 

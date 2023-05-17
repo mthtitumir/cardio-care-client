@@ -10,6 +10,7 @@ const SideBar = () => {
             <div>
                 <Link to='dashboard'><button className="btn block w-full rounded mb-3 btn-outline btn-success">Dashboard</button></Link>
                 <Link to='doctors'><button className="btn block w-full rounded mb-3 btn-outline btn-success">Doctors</button></Link>
+                <Link to='problems'><button className="btn block w-full rounded mb-3 btn-outline btn-success">Problems</button></Link>
                 <Link to='services'><button className="btn block w-full rounded mb-3 btn-outline btn-success">Services</button></Link>
                   
             </div>

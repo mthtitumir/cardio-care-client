@@ -7,6 +7,7 @@ import AdHome from "../pages/Admin/Home/AdHome";
 import AdDoctors from "../pages/Admin/AdDoctors/AdDoctors";
 import AdServices from "../pages/Admin/AdServices/AdServices";
 import AdEditDoctor from "../pages/Admin/AdDoctors/AdEditDoctor";
+import AdProblems from "../pages/Admin/AdProblems/AdProblems";
 
 const router = createBrowserRouter([
     {
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
             {
                 path: '/admin-access/services',
                 element: <AdServices></AdServices>
+            },
+            {
+                path: '/admin-access/problems',
+                element: <AdProblems></AdProblems>
             },
             {
                 path: '/admin-access/doctors/edit/:id',
