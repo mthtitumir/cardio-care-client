@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Tilt from 'react-parallax-tilt';
 
 const SingleDoctor = ({ doctor }) => {
 
@@ -16,22 +17,24 @@ const SingleDoctor = ({ doctor }) => {
     return (
         <div>
             <div className="card w-full">
-                <div className='hover:bg-cyan-500 p-2 rounded-[50%]'>
+                <div className='p-2 rounded-[50%]'>
 
                     {isHovered ?
-                        <div 
-                        onMouseEnter={handleHover}
-                        onMouseLeave={handleLeave}
-                        className='relative'>
-                            <figure className='rounded-[50%]'><img src={photoUrl} alt="Shoes" /></figure>
-                            <div className='absolute left-0 right-0 w-1/2 mx-auto bottom-5 text-white uppercase'>
-                                <Link to='/appointment'><h2 className='bg-red-500 text-center w-full py-3 rounded font-semibold'>Book Appointment</h2></Link> 
+                        <Tilt className="parallax-effect" perspective={500}>
+                        <div
+                            onMouseEnter={handleHover}
+                            onMouseLeave={handleLeave}
+                            className='relative'>
+                            <figure className='w-2/3 mx-auto rounded-[50%] shadow-xl'><img src={photoUrl} alt="Shoes" /></figure>
+                            <div className='absolute left-0 right-0 w-1/3 md:w-1/2 mx-auto bottom-10 text-white uppercase'>
+                                <Link to='/appointment'><h2 className='text-sm bg-sky-500 text-center py-3 rounded font-semibold'>Book Appointment</h2></Link>
                             </div>
-                        </div> :
-                        <figure 
-                        onMouseEnter={handleHover}
-                        onMouseLeave={handleLeave}
-                        className='rounded-[50%]'><img src={photoUrl} alt="Shoes" /></figure>
+                        </div>
+                        </Tilt> :
+                        <figure
+                            onMouseEnter={handleHover}
+                            onMouseLeave={handleLeave}
+                            className='w-2/3 mx-auto rounded-[50%] shadow-xl'><img src={photoUrl} alt="Shoes" /></figure>
                     }
                 </div>
                 <div className=" bg-cyan-50 rounded-2xl shadow-xl mt-3">

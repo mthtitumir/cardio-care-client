@@ -3,6 +3,7 @@ import heart from '../../../assets/about us/standing-heart.jpg'
 import manPata from '../../../assets/about us/man&pata.jpg'
 import { TiTick } from 'react-icons/ti';
 import { FiPhoneCall } from 'react-icons/fi';
+import TitleButton from '../../../components/TitleButton';
 
 
 const AboutUs = () => {
@@ -11,21 +12,21 @@ const AboutUs = () => {
             {/* left section  */}
             <div className='container mx-auto grid md:grid-cols-2  mt-20'>
                 <div className='relative'>
-                    <figure className='w-3/4'><img className='rounded-xl' src={heart} alt="" /></figure>
-                    <figure className='absolute w-1/2 top-[60%] left-[40%]'><img className='rounded-xl' src={manPata} alt="" /></figure>
+                    <figure className='md:w-3/4'><img className='rounded-xl' src={heart} alt="" /></figure>
+                    <figure className='absolute hidden  md:w-1/2 bottom-[50%] md:top-[60%] md:left-[40%]'><img className='rounded-xl' src={manPata} alt="" /></figure>
                 </div>
 
                 {/* right section  */}
-                <div>
+                <div className='p-5'>
                     <div className='flex justify-center mb-3'>
-                        <button className='py-2 px-3 text-cyan-500 font-semibold text-md shadow-lg rounded-lg uppercase drop-shadow-lg'>About Us</button>
+                        <TitleButton text={"About Us"}></TitleButton>
                     </div>
                     <h2 className='text-5xl text-sky-900 font-semibold text-center mb-5'>Why <span className='text-red-600'>Cardio</span><span className='text-cyan-600'>Care</span> Special</h2>
-                    <p className='text-center text-gray-600 font-semibold'>Welcome to HeartWell Cardio Clinic, where your heart health is our top priority. Our clinic is a leading institution dedicated to providing comprehensive cardiovascular care to patients of all ages. With a team of highly skilled and experienced cardiologists, nurses, and support staff, we strive to deliver exceptional medical services and personalized treatment plans.</p>
+                    <p className='text-center text-gray-600 font-semibold'>Welcome to Cardio Care, where your heart health is our top priority. Our clinic is a leading institution dedicated to providing comprehensive cardiovascular care to patients of all ages. With a team of highly skilled and experienced cardiologists, nurses, and support staff, we strive to deliver exceptional medical services and personalized treatment plans.</p>
 
                     {/* services of ours  */}
 
-                    <div className='flex mt-5'>
+                    <div className='flex mt-5 justify-between'>
                         <div>
                             <p className='text-lg font-semibold py-1'><TiTick className='text-teal-500 inline text-xl'></TiTick>Hypertension Management</p>
                             <p className='text-lg font-semibold py-1'><TiTick className='text-teal-500 inline text-xl'></TiTick>Coronary Artery Disease Treatment</p>

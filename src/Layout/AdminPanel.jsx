@@ -6,11 +6,13 @@ import AdNavBar from '../pages/Admin/AdNavBar/AdNavBar';
 
 const AdminPanel = () => {
     return (
-        <div>
+        <div className='container mx-auto'>
             <AdNavBar></AdNavBar>
             <div className='grid grid-cols-12 container mx-auto gap-8'>
-                <SideBar></SideBar>
-                <div className='col-span-10'>
+                <div className='col-span-3'>
+                    <SideBar></SideBar>
+                </div>
+                <div className='col-span-9'>
                     <Outlet></Outlet>
                 </div>
             </div>

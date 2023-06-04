@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import logo from '../../../assets/logo/cardio-care.png'
 import { Link } from 'react-router-dom';
 
 const AdNavBar = () => {
+    const {user} = useContext(authcontext)
     return (
         <div className="navbar bg-base-100 container mx-auto">
             <div className='flex flex-1 items-center'>

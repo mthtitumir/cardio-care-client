@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import SingleDoctor from './SingleDoctor';
+import TitleButton from '../../../components/TitleButton';
 const Doctors = () => {
     const [doctors, setDoctors] = useState([]);
     useEffect(()=>{
@@ -9,7 +10,7 @@ const Doctors = () => {
     }, [])
     return (
         <div className='container mx-auto '>
-            <div className='flex justify-center mb-3 mt-20'><button className='py-2 px-3 text-cyan-500 font-semibold text-md shadow-lg rounded-lg uppercase drop-shadow-lg'>Doctors</button></div>
+            <div className='flex justify-center mb-3 mt-20'><TitleButton text={"Doctors"}></TitleButton></div>
             <h2 className='text-5xl text-sky-900 font-semibold text-center mb-10'>Our Heros</h2>
             <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-4'>
                {

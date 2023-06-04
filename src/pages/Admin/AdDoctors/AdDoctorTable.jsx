@@ -1,5 +1,4 @@
 import React from 'react';
-import Speciality from '../../Home/Speciality/Speciality';
 import { Link } from 'react-router-dom';
 
 const AdDoctorTable = ({ doctor, handleDoctorDelete, handleDoctorEdit }) => {
@@ -26,7 +25,7 @@ const AdDoctorTable = ({ doctor, handleDoctorDelete, handleDoctorEdit }) => {
             </td>
             <td>{speciality}</td>
             <td>
-                <Link to={`/admin-access/doctors/edit/${_id}`}><button onClick={()=>handleDoctorEdit(_id)} className="btn btn-ghost btn-xs">Edit</button></Link>
+                <Link to={`/admin-access/doctors/edit/${_id}`}><button className="btn btn-ghost btn-xs">Edit</button></Link>
             </td>
             <td>
                 <button onClick={()=>handleDoctorDelete(_id)} className="btn btn-ghost btn-xs">Delete</button>

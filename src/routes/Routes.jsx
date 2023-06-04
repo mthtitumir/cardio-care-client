@@ -8,6 +8,8 @@ import AdDoctors from "../pages/Admin/AdDoctors/AdDoctors";
 import AdServices from "../pages/Admin/AdServices/AdServices";
 import AdEditDoctor from "../pages/Admin/AdDoctors/AdEditDoctor";
 import AdProblems from "../pages/Admin/AdProblems/AdProblems";
+import Login from "../pages/Login/Login";
+import Register from "../pages/Register/Register";
 
 const router = createBrowserRouter([
     {
@@ -21,6 +23,14 @@ const router = createBrowserRouter([
             {
                 path: '/appointment',
                 element: <Appointment></Appointment>
+            },
+            {
+                path: '/login',
+                element: <Login></Login>
+            },
+            {
+                path: '/register',
+                element: <Register></Register>
             }
         ]
     },
