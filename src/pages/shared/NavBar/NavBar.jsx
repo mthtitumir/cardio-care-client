@@ -2,9 +2,19 @@ import React from 'react';
 import logo from '../../../assets/logo/cardio-care.png'
 import { Link } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
+import Swal from 'sweetalert2';
 
 const NavBar = () => {
-    const { user } = useAuth();
+    const { user, logOut } = useAuth();
+    const handleLogout = () =>{
+        logOut()
+        .then(() =>{
+            Swal.fire(
+                'You logged out successfully!',
+                'success'
+            )
+        })
+    }
     return (
         <div className='fixed z-50 top-0 w-full bg-cyan-50 drop-shadow-lg'>
             <div className=" navbar container mx-auto rounded-lg border">
@@ -38,12 +48,17 @@ const NavBar = () => {
                     {
                         user ?
 
-                            <div className="">
+                            <div className="dropdown dropdown-end">
                                 <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                                     <div className="w-10 rounded-full">
-                                        <img src='https://i.ibb.co/3Mrx6Fg/blank-profile.webp' />
+                                        <img src={user.photoURL} />
                                     </div>
                                 </label>
+                                <ul tabIndex={0} className="mt-3 p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
+                                    <li><Link>Profile</Link></li>
+                                    <li><a>Settings</a></li>
+                                    <li onClick={handleLogout}><Link>Logout</Link></li>
+                                </ul>
                             </div>
                             :
                             <Link to='/login'>Login</Link>
